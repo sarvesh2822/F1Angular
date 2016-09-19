@@ -31,4 +31,17 @@ controller('driversController', function($scope, ergastAPIservice) {
     ergastAPIservice.getDriverRaces($scope.id).success(function (response) {
         $scope.races = response.MRData.RaceTable.Races; 
     }); 
+  })
+
+  .controller('teamsController', function($scope, ergastAPIservice){
+
+
+  	$scope.teams = [];
+
+  	ergastAPIservice.getTeams().success(function(response){
+
+  		$scope.teams = response.MRData.ConstructorTable.Constructors;
+  	});
+
+
   });

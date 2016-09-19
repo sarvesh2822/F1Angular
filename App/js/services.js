@@ -25,6 +25,13 @@ ergastAPI.getDriverRaces = function(id){
 
 }
 
+ergastAPI.getTeams = function(){
+	return $http({
+		method:'JSONP',
+		url:'http://ergast.com/api/f1/2016/constructors.json?callback=JSON_CALLBACK'
+	})
+}
+
 return ergastAPI;
 
 });
