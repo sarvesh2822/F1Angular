@@ -1,23 +1,31 @@
 <section id="main">
-  <a href="./#/drivers"><- Back to drivers list</a>
-  <nav id="secondary" class="main-nav">
-    <div class="driver-picture">
-      <div class="avatar">
+  
+
+  <div class="main-content">
+    <div class= "profile">
+
+
+    <div class="pull-left">
+<div class="avatar">
         <img ng-show="driver" src="img/drivers/{{driver.Driver.driverId}}.png" />
-        <img ng-show="driver" src="img/flags/{{driver.Driver.nationality}}.png" /><br/>
-        {{driver.Driver.givenName}} {{driver.Driver.familyName}}
+       
       </div>
-    </div>
-    <div class="driver-status">
+</div>
+<div class="pull-left driver-name">
+ <img ng-show="driver" src="img/flags/{{driver.Driver.nationality}}.png" /><br/>
+        {{driver.Driver.givenName}} {{driver.Driver.familyName}}
+</div>
+<div class="pull-left">
+<div class="driver-status">
       Country: {{driver.Driver.nationality}}   <br/>
       Team: {{driver.Constructors[0].name}}<br/>
       Birth: {{driver.Driver.dateOfBirth}}<br/>
-      <a href="{{driver.Driver.url}}" target="_blank">Biography</a>
+      Biography: <a href="{{driver.Driver.url}}" target="_blank"><img src="img/body/external_link.png"></a>
     </div>
-  </nav>
-
-  <div class="main-content">
-    <table class="result-table">
+</div>
+<!--<div class="btn btn-default pull-right"><a href="./#/drivers">Drivers</a></div>-->
+</div>
+    <table class="result-table table table-striped table-bordered box list-table">
       <thead>
         <tr><th colspan="5">Formula 1 2013 Results</th></tr>
       </thead>
@@ -37,3 +45,10 @@
   </div>
 
 </section>
+
+
+
+<div class="profile-menu" style="background-color:#000;">
+
+
+</div>
