@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html ng-app="F1FeederApp" lang="en" >
 
 <head>
 
@@ -35,7 +35,7 @@
     </style>
 
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controller.js"></script>
@@ -54,8 +54,7 @@
         </div>
         <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="#/drivers">Drivers</a>
-                </li>
+                <li ng-class="{ active: isActive('/drivers')}"><a ui-sref="drivers({year:year})">Drivers</a></li>
                 <li><a href="#/teams">Teams</a>
                 </li>
             </ul>
@@ -69,8 +68,8 @@
   
 
     <!-- Page Content -->
-    <div class="container" ng-app="F1FeederApp">
-        <div ng-view></div>
+    <div class="container" >
+         <div ui-view></div>
     </div>
     <!-- /.container -->
 
